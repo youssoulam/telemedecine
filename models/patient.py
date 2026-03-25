@@ -7,7 +7,7 @@ class Patients(models.Model):
     _name = 'telemedecine.patient'
     _description = 'Liste des Patients'
     
-    name = fields.Char(string='Référence', required=True, index=True)
+    name = fields.Char(string='Référence du client', required=True, index=True)
     prenom = fields.Char(string='Prénom', required=True)
     nom_famille = fields.Char(string='Nom de famille', required=True)
     sexe = fields.Selection([('h',"Homme"),('f',"Femme"),('a',"Autres")], 
