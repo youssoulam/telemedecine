@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Création de menu -->
+    <menuitem id="tele_medecine"  name="Télé Médecine" sequence="0"/>
+    <menuitem id="tele_medecine_patient"  
+        name="Patients" sequence="1" parent="tele_medecine" 
+        action="action_telemedecine_patient"/>
+    <menuitem id="tele_medecine_medecin"  
+        name="Médecins" sequence="2" parent="tele_medecine" 
+        action="action_telemedecine_medecin"/>
+    <menuitem id="tele_medecine_consultation"  
+        name="Consultations" sequence="3" parent="tele_medecine" 
+        action="action_telemedecine_consultation"/>
+
+</odoo>

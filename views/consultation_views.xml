@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Réprésentation de la vue liste -->
+    <record id="telemedecine_consultation_view_list" model="ir.ui.view">
+        <field name="name">telemedecine.consultation.view.list</field>
+        <field name="model">telemedecine.consultation</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="patient_id" />
+                <field name="medecin_id" />
+                <field name="type_consultation" />
+                <field name="mode_consultation" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Réprésentation de la vue forme -->
+    <record id="telemedecine_consultation_view_form" model="ir.ui.view">
+        <field name="name">telemedecine.consultation.view.form</field>
+        <field name="model">telemedecine.consultation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="patient_id"/>
+                            <field name="medecin_id"/>
+                            <field name="date_debut"/>
+                        </group>
+                        <group>
+                            <field name="type_consultation"/>
+                            <field name="mode_consultation"/>
+                            <field name="motif"/>
+                            <field name="date_fin"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Réprésentation de l'action pour faire le lien entre 
+    les vues et le menu -->
+    <record model="ir.actions.act_window" id="action_telemedecine_consultation">
+        <field name="name">Consultations</field>
+        <field name="res_model">telemedecine.consultation</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="telemedecine_consultation_view_list"/>
+    </record>
+
+
+
+
+</odoo>

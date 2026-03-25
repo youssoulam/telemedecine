@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+    <!-- Interface Télémedecine -->
+        <record model="ir.module.category" id="module_telemedecine_category">
+            <field name="name">Télémédecine</field>
+            <field name="description">les habillitations du module télémédecine </field>
+            <field name="sequence">2</field>
+        </record>
+
+    <!-- Groupe assistant -->
+        <record id="group_telemedecine_assistant" model="res.groups">
+            <field name="name">Assistant</field>
+            <field name="category_id" ref="module_telemedecine_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        
+    <!-- Groupe medecin -->
+        <record id="group_telemedecine_medecin" model="res.groups">
+            <field name="name">Médecin</field>
+            <field name="category_id" ref="module_telemedecine_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Les médecins du module telemedecine</field>
+        </record> 
+
+    <!-- Groupe Administrateur Télémédecine -->
+        <record id="group_telemedecine_admin" model="res.groups">
+            <field name="name">Administrateur Télémédecine</field>
+            <field name="category_id" ref="module_telemedecine_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Les administrateurs du module telemedecine</field>
+        </record> 
+
+
+    </data>
+</odoo>
