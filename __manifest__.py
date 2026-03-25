@@ -25,7 +25,7 @@
         'views/consultation_views.xml',
         'views/menu.xml',
     ],
-    'demo': [],
+    #'demo': [],
     'installable': True,
     'application': True,
     'auto_install': False,
